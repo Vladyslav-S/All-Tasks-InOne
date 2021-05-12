@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalculateViewController: UIViewController {
+class BMICalculateViewController: UIViewController {
 
     var calculatorBrain = CalculatorBrain()
     
@@ -16,6 +16,8 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var weightValueLabel: UILabel!
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var weightSlider: UISlider!
+    
+    var bmiCalculatorModel = LessonModel(name: "Eleventh lesson", type: "bmiCalculator", imageData: #imageLiteral(resourceName: "coal"), withIdentifire: "BMIVC", storyboardName: "BMI")
     
     override func viewDidLoad() {
         super.viewDidLoad()

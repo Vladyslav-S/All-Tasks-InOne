@@ -10,7 +10,7 @@ import UIKit
 class RichViewController: UIViewController {
 
     
-    var richModel = LessonModel(name: "Second lesson", type: "I'm Rich", imageData: #imageLiteral(resourceName: "DiceOne"), withIdentifire: "PoorVC", storyboardName: "I'mRich", viewController: RichViewController.Type)
+    var richModel = LessonModel(name: "Second lesson", type: "Rich", imageData: #imageLiteral(resourceName: "DiceOne"), withIdentifire: "RichVC", storyboardName: "Rich")
    
     override func viewDidLoad() {
         super.viewDidLoad()

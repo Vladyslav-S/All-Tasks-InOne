@@ -9,17 +9,12 @@ import UIKit
 
 class PoorViewController: UIViewController {
 
-    var poorModel = LessonModel()
+    var poorModel = LessonModel(name: "Third lesson", type: "Picture)) ", imageData: #imageLiteral(resourceName: "DiceTwo"), withIdentifire: "PoorVC", storyboardName: "Poor")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        poorModel.name = "Third lesson"
-        poorModel.type = "I'm Poor"
-        poorModel.imageData = #imageLiteral(resourceName: "DiceThree")
-        
-       
     }
 
     

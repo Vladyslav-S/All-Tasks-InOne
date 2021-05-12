@@ -12,6 +12,7 @@ class EggTimerViewController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
+    var eggTimerModel = LessonModel(name: "Eight lesson", type: "EggTimer", imageData: #imageLiteral(resourceName: "medium_egg"), withIdentifire: "EggTimerVC", storyboardName: "EggTimer")
     
     let eggTimes = ["Soft" : 5, "Medium" : 8, "Hard" : 12]
     var secondsPassed = 0

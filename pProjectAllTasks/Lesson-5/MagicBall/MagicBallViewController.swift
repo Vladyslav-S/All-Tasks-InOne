@@ -11,12 +11,12 @@ class MagicBallViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
+    var magicBallModel = LessonModel(name: "Fifth lesson", type: "BarabanJakubovicha", imageData: #imageLiteral(resourceName: "BTC"), withIdentifire: "MagicBallVC", storyboardName: "MagicBall")
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-    
     }
 
     @IBAction func askButtonPressed(_ sender: Any) {

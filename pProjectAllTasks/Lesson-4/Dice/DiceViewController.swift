@@ -13,12 +13,11 @@ class DiceViewController: UIViewController {
     @IBOutlet weak var secondDice: UIImageView!
     
 
+    var diceModel = LessonModel(name: "Fourth lesson", type: "Ryletka", imageData: #imageLiteral(resourceName: "DiceThree"), withIdentifire: "DiceVC", storyboardName: "Dice")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func rollAction(_ sender: Any) {

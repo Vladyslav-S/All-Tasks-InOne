@@ -17,6 +17,8 @@ class QuizzlerViewController: UIViewController {
     @IBOutlet weak var secondVariantButton: UIButton!
     @IBOutlet weak var thirdVariantButton: UIButton!
     
+    var quizzlerModel = LessonModel(name: "Nineth lesson", type: "Quizzler", imageData: #imageLiteral(resourceName: "DOGE"), withIdentifire: "QuizzlerVC", storyboardName: "Quizzler")
+    
     var quizBrain = QuizBrain()
        
     override func viewDidLoad() {

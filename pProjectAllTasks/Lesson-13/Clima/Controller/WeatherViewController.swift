@@ -18,6 +18,8 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     
+    var weatherModel = LessonModel(name: "Thirteenth lesson", type: "CliMa)))", imageData: #imageLiteral(resourceName: "DiceSix"), withIdentifire: "ClimaVC", storyboardName: "Clima")
+    
     var people: [NSManagedObject] = []
     
     
@@ -96,6 +98,7 @@ extension WeatherViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return !autoCompleteText( in : textField, using: string, suggestionsArray: suggestionsArray)
     }
+    
     func autoCompleteText( in textField: UITextField, using string: String, suggestionsArray: [String]) -> Bool {
         if !string.isEmpty,
            let selectedTextRange = textField.selectedTextRange,
@@ -174,7 +177,7 @@ extension WeatherViewController {
         }
     }
     
-    func retrieveValues() {
+    /*private*/ func retrieveValues() {
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             let contex = appDelegate.persistentContainer.viewContext
             let fetchRequest = NSFetchRequest<CoreEntity/*NSManagedObject*/>(entityName: "CoreEntity")

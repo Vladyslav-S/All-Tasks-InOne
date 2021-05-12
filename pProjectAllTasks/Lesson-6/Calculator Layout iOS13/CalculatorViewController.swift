@@ -9,6 +9,10 @@
 import UIKit
 
 class CalculatorViewController: UIViewController {
+    
+    
+    
+    var calculatorModel = LessonModel(name: "Sixth lesson", type: "CalkulatorAutoLauout", imageData: #imageLiteral(resourceName: "DiceeLogo"), withIdentifire: "CalculatorVC", storyboardName: "Calculator")
 
     override func viewDidLoad() {
         super.viewDidLoad()

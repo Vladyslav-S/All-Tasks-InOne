@@ -14,6 +14,7 @@ class DestinyViewController: UIViewController {
     @IBOutlet weak var choice1Button: UIButton!
     @IBOutlet weak var choice2Button: UIButton!
     
+    var destinyModel = LessonModel(name: "Tenth lesson", type: "Destiny", imageData: #imageLiteral(resourceName: "coal"), withIdentifire: "DestinyVC", storyboardName: "Destiny")
     var storyBrain = StoryBrain()
     
     
