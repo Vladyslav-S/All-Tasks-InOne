@@ -14,6 +14,7 @@ class ByteCoinViewController: UIViewController {
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
     
+    
     var byteCoinModel = LessonModel(name: "Fourteenth lesson", type: "Byte Coin)))", imageData: #imageLiteral(resourceName: "DiceFour"), withIdentifire: "ByteCoinVC", storyboardName: "ByteCoin")
     
     var coinManager = CoinManager()

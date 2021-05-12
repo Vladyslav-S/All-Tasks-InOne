@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0096B01F26440B49004F3AF4 /* Destiny.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0096B01E26440B49004F3AF4 /* Destiny.storyboard */; };
+		0056AA9F264C1B4300529A9B /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056AA98264C1B4300529A9B /* CoinManager.swift */; };
+		0056AAA0264C1B4300529A9B /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056AA99264C1B4300529A9B /* CoinData.swift */; };
+		0056AAA1264C1B4300529A9B /* ByteCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056AA9B264C1B4300529A9B /* ByteCoinViewController.swift */; };
+		0056AAAB264C28AE00529A9B /* ByteCoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0056AAAA264C28AE00529A9B /* ByteCoin.storyboard */; };
 		0096B02626441257004F3AF4 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B02526441257004F3AF4 /* CustomTableViewCell.swift */; };
 		0096B03A26498242004F3AF4 /* LessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B03926498242004F3AF4 /* LessonModel.swift */; };
 		0096B0AA264BD966004F3AF4 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B09C264BD965004F3AF4 /* CalculatorBrain.swift */; };
@@ -25,10 +28,6 @@
 		0096B0FD264BDAE5004F3AF4 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B0E6264BDAE5004F3AF4 /* WeatherModel.swift */; };
 		0096B0FE264BDAE5004F3AF4 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B0E7264BDAE5004F3AF4 /* WeatherManager.swift */; };
 		0096B0FF264BDAE5004F3AF4 /* Clima.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0096B0E9264BDAE5004F3AF4 /* Clima.storyboard */; };
-		0096B11F264BDBEB004F3AF4 /* ByteCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B113264BDBEB004F3AF4 /* ByteCoinViewController.swift */; };
-		0096B120264BDBEB004F3AF4 /* CoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B115264BDBEB004F3AF4 /* CoinManager.swift */; };
-		0096B121264BDBEB004F3AF4 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B116264BDBEB004F3AF4 /* CoinData.swift */; };
-		0096B122264BDBEB004F3AF4 /* ByteCoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0096B118264BDBEB004F3AF4 /* ByteCoin.storyboard */; };
 		00AA2890263066B90007613D /* DestinyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA2884263066B90007613D /* DestinyViewController.swift */; };
 		00AA2891263066B90007613D /* StoryBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA2886263066B90007613D /* StoryBrain.swift */; };
 		00AA2892263066B90007613D /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA2887263066B90007613D /* Story.swift */; };
@@ -67,7 +66,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0096B01E26440B49004F3AF4 /* Destiny.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Destiny.storyboard; sourceTree = "<group>"; };
+		0056AA8D264C0A9700529A9B /* Destiny.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Destiny.storyboard; sourceTree = "<group>"; };
+		0056AA98264C1B4300529A9B /* CoinManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
+		0056AA99264C1B4300529A9B /* CoinData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
+		0056AA9B264C1B4300529A9B /* ByteCoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteCoinViewController.swift; sourceTree = "<group>"; };
+		0056AAAA264C28AE00529A9B /* ByteCoin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ByteCoin.storyboard; path = ../ByteCoin.storyboard; sourceTree = "<group>"; };
 		0096B02526441257004F3AF4 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		0096B03926498242004F3AF4 /* LessonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonModel.swift; sourceTree = "<group>"; };
 		0096B09C264BD965004F3AF4 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
@@ -85,10 +88,6 @@
 		0096B0E6264BDAE5004F3AF4 /* WeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		0096B0E7264BDAE5004F3AF4 /* WeatherManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		0096B0EA264BDAE5004F3AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Clima.storyboard; sourceTree = "<group>"; };
-		0096B113264BDBEB004F3AF4 /* ByteCoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteCoinViewController.swift; sourceTree = "<group>"; };
-		0096B115264BDBEB004F3AF4 /* CoinManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinManager.swift; sourceTree = "<group>"; };
-		0096B116264BDBEB004F3AF4 /* CoinData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
-		0096B119264BDBEB004F3AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ByteCoin.storyboard; sourceTree = "<group>"; };
 		00AA2884263066B90007613D /* DestinyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinyViewController.swift; sourceTree = "<group>"; };
 		00AA2886263066B90007613D /* StoryBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBrain.swift; sourceTree = "<group>"; };
 		00AA2887263066B90007613D /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
@@ -139,12 +138,111 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0096B099264BD965004F3AF4 /* Lesson-11 */ = {
+		0056AA85264C0A4000529A9B /* I'mRich */ = {
+			isa = PBXGroup;
+			children = (
+				00E6C051263047920052A00E /* Rich.storyboard */,
+				00E6C04D263047920052A00E /* RichViewController.swift */,
+			);
+			path = "I'mRich";
+			sourceTree = "<group>";
+		};
+		0056AA86264C0A6000529A9B /* Poor */ = {
+			isa = PBXGroup;
+			children = (
+				00E6C07B263054DE0052A00E /* Poor.storyboard */,
+				00E6C077263054DE0052A00E /* PoorViewController.swift */,
+			);
+			path = Poor;
+			sourceTree = "<group>";
+		};
+		0056AA89264C0A8200529A9B /* EggTimer */ = {
+			isa = PBXGroup;
+			children = (
+				00E6C1E926305E700052A00E /* alarm_sound.mp3 */,
+				00E6C1E026305E700052A00E /* EggTimerViewController.swift */,
+				00E6C1E426305E700052A00E /* EggTimer.storyboard */,
+			);
+			path = EggTimer;
+			sourceTree = "<group>";
+		};
+		0056AA8B264C0A9700529A9B /* Destiny */ = {
+			isa = PBXGroup;
+			children = (
+				0056AA8C264C0A9700529A9B /* View */,
+				00AA2885263066B90007613D /* Model */,
+				00AA2883263066B90007613D /* Controller */,
+			);
+			path = Destiny;
+			sourceTree = "<group>";
+		};
+		0056AA8C264C0A9700529A9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0056AA8D264C0A9700529A9B /* Destiny.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0056AA8F264C0CE800529A9B /* BMICalculator */ = {
 			isa = PBXGroup;
 			children = (
 				0096B09B264BD965004F3AF4 /* Models */,
 				0096B0A1264BD965004F3AF4 /* Controllers */,
 				0096B0A4264BD965004F3AF4 /* Views */,
+			);
+			path = BMICalculator;
+			sourceTree = "<group>";
+		};
+		0056AA91264C0D0400529A9B /* Tips */ = {
+			isa = PBXGroup;
+			children = (
+				0096B0BE264BDA68004F3AF4 /* Tipsy.storyboard */,
+				0096B0C1264BDA68004F3AF4 /* Controllers */,
+			);
+			path = Tips;
+			sourceTree = "<group>";
+		};
+		0056AA93264C0D2000529A9B /* ByteCoin */ = {
+			isa = PBXGroup;
+			children = (
+				0056AA9A264C1B4300529A9B /* Controller */,
+				0056AA97264C1B4300529A9B /* Model */,
+				0056AA9C264C1B4300529A9B /* View */,
+			);
+			path = ByteCoin;
+			sourceTree = "<group>";
+		};
+		0056AA97264C1B4300529A9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0056AA98264C1B4300529A9B /* CoinManager.swift */,
+				0056AA99264C1B4300529A9B /* CoinData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0056AA9A264C1B4300529A9B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0056AA9B264C1B4300529A9B /* ByteCoinViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0056AA9C264C1B4300529A9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0056AAAA264C28AE00529A9B /* ByteCoin.storyboard */,
+			);
+			name = View;
+			path = "../../../../14/ByteCoin-iOS13/ByteCoin/View";
+			sourceTree = "<group>";
+		};
+		0096B099264BD965004F3AF4 /* Lesson-11 */ = {
+			isa = PBXGroup;
+			children = (
+				0056AA8F264C0CE800529A9B /* BMICalculator */,
 			);
 			path = "Lesson-11";
 			sourceTree = "<group>";
@@ -178,8 +276,7 @@
 		0096B0BA264BDA68004F3AF4 /* Lesson-12 */ = {
 			isa = PBXGroup;
 			children = (
-				0096B0BE264BDA68004F3AF4 /* Tipsy.storyboard */,
-				0096B0C1264BDA68004F3AF4 /* Controllers */,
+				0056AA91264C0D0400529A9B /* Tips */,
 			);
 			path = "Lesson-12";
 			sourceTree = "<group>";
@@ -250,36 +347,9 @@
 		0096B10E264BDBEB004F3AF4 /* Lesson-14 */ = {
 			isa = PBXGroup;
 			children = (
-				0096B112264BDBEB004F3AF4 /* Controller */,
-				0096B114264BDBEB004F3AF4 /* Model */,
-				0096B117264BDBEB004F3AF4 /* View */,
+				0056AA93264C0D2000529A9B /* ByteCoin */,
 			);
 			path = "Lesson-14";
-			sourceTree = "<group>";
-		};
-		0096B112264BDBEB004F3AF4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				0096B113264BDBEB004F3AF4 /* ByteCoinViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		0096B114264BDBEB004F3AF4 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				0096B115264BDBEB004F3AF4 /* CoinManager.swift */,
-				0096B116264BDBEB004F3AF4 /* CoinData.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0096B117264BDBEB004F3AF4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0096B118264BDBEB004F3AF4 /* ByteCoin.storyboard */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		00AA2883263066B90007613D /* Controller */ = {
@@ -297,15 +367,6 @@
 				00AA2887263066B90007613D /* Story.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		00AA2888263066B90007613D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0096B01E26440B49004F3AF4 /* Destiny.storyboard */,
-			);
-			name = View;
-			path = "../../../../../Downloads/lesson10-My-Quizz-master/Destini-iOS13/Destini-iOS13/View";
 			sourceTree = "<group>";
 		};
 		00E6C00A263044610052A00E = {
@@ -356,8 +417,7 @@
 		00E6C02E263044FD0052A00E /* Lesson-2 */ = {
 			isa = PBXGroup;
 			children = (
-				00E6C051263047920052A00E /* Rich.storyboard */,
-				00E6C04D263047920052A00E /* RichViewController.swift */,
+				0056AA85264C0A4000529A9B /* I'mRich */,
 			);
 			path = "Lesson-2";
 			sourceTree = "<group>";
@@ -365,8 +425,7 @@
 		00E6C02F263045190052A00E /* Lesson-3 */ = {
 			isa = PBXGroup;
 			children = (
-				00E6C07B263054DE0052A00E /* Poor.storyboard */,
-				00E6C077263054DE0052A00E /* PoorViewController.swift */,
+				0056AA86264C0A6000529A9B /* Poor */,
 			);
 			path = "Lesson-3";
 			sourceTree = "<group>";
@@ -408,18 +467,18 @@
 		00E6C1A226305CB40052A00E /* Lesson-6 */ = {
 			isa = PBXGroup;
 			children = (
-				00E6C1A326305CCA0052A00E /* Calculator Layout iOS13 */,
+				00E6C1A326305CCA0052A00E /* CalculatorLayoutiOS13 */,
 			);
 			path = "Lesson-6";
 			sourceTree = "<group>";
 		};
-		00E6C1A326305CCA0052A00E /* Calculator Layout iOS13 */ = {
+		00E6C1A326305CCA0052A00E /* CalculatorLayoutiOS13 */ = {
 			isa = PBXGroup;
 			children = (
 				00E6C1A826305CCA0052A00E /* Calculator.storyboard */,
 				00E6C1A426305CCA0052A00E /* CalculatorViewController.swift */,
 			);
-			path = "Calculator Layout iOS13";
+			path = CalculatorLayoutiOS13;
 			sourceTree = "<group>";
 		};
 		00E6C1B726305D890052A00E /* Lesson-7 */ = {
@@ -457,9 +516,7 @@
 		00E6C1DD26305E580052A00E /* Lesson-8 */ = {
 			isa = PBXGroup;
 			children = (
-				00E6C1E926305E700052A00E /* alarm_sound.mp3 */,
-				00E6C1E026305E700052A00E /* EggTimerViewController.swift */,
-				00E6C1E426305E700052A00E /* EggTimer.storyboard */,
+				0056AA89264C0A8200529A9B /* EggTimer */,
 			);
 			path = "Lesson-8";
 			sourceTree = "<group>";
@@ -510,9 +567,7 @@
 		00E6C21C2630600C0052A00E /* Lesson-10 */ = {
 			isa = PBXGroup;
 			children = (
-				00AA2888263066B90007613D /* View */,
-				00AA2885263066B90007613D /* Model */,
-				00AA2883263066B90007613D /* Controller */,
+				0056AA8B264C0A9700529A9B /* Destiny */,
 			);
 			path = "Lesson-10";
 			sourceTree = "<group>";
@@ -574,13 +629,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0096B01F26440B49004F3AF4 /* Destiny.storyboard in Resources */,
 				00E6C1AF26305CCB0052A00E /* Calculator.storyboard in Resources */,
 				0096B0C8264BDA68004F3AF4 /* Tipsy.storyboard in Resources */,
 				00E6C023263044640052A00E /* LaunchScreen.storyboard in Resources */,
 				00E6C1D026305DA80052A00E /* F.wav in Resources */,
 				00E6C1D226305DA80052A00E /* E.wav in Resources */,
-				0096B122264BDBEB004F3AF4 /* ByteCoin.storyboard in Resources */,
 				00E6C1CF26305DA80052A00E /* B.wav in Resources */,
 				00E6C21326305F940052A00E /* Quizzler.storyboard in Resources */,
 				00E6C020263044640052A00E /* Assets.xcassets in Resources */,
@@ -596,6 +649,7 @@
 				00E6C17F263059610052A00E /* Dice.storyboard in Resources */,
 				00E6C19926305A7A0052A00E /* MagicBall.storyboard in Resources */,
 				00E6C01E263044610052A00E /* Main.storyboard in Resources */,
+				0056AAAB264C28AE00529A9B /* ByteCoin.storyboard in Resources */,
 				0096B0FF264BDAE5004F3AF4 /* Clima.storyboard in Resources */,
 				00E6C059263047920052A00E /* Rich.storyboard in Resources */,
 				0096B0F4264BDAE5004F3AF4 /* Cities.txt in Resources */,
@@ -609,7 +663,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0096B11F264BDBEB004F3AF4 /* ByteCoinViewController.swift in Sources */,
 				0096B0AB264BD966004F3AF4 /* BMI.swift in Sources */,
 				00AA2890263066B90007613D /* DestinyViewController.swift in Sources */,
 				00E6C1C926305DA80052A00E /* XylophoneViewController.swift in Sources */,
@@ -620,16 +673,17 @@
 				00E6C056263047920052A00E /* RichViewController.swift in Sources */,
 				00E6C01B263044610052A00E /* MainViewController.swift in Sources */,
 				00E6C1F026305E700052A00E /* EggTimerViewController.swift in Sources */,
-				0096B120264BDBEB004F3AF4 /* CoinManager.swift in Sources */,
-				0096B121264BDBEB004F3AF4 /* CoinData.swift in Sources */,
 				0096B0FD264BDAE5004F3AF4 /* WeatherModel.swift in Sources */,
 				0096B0CB264BDA68004F3AF4 /* TipsyCalculatorViewController.swift in Sources */,
 				00E6C21226305F940052A00E /* Question.swift in Sources */,
 				0096B0CA264BDA68004F3AF4 /* ResultViewController.swift in Sources */,
+				0056AAA1264C1B4300529A9B /* ByteCoinViewController.swift in Sources */,
+				0056AA9F264C1B4300529A9B /* CoinManager.swift in Sources */,
 				0096B0AE264BD966004F3AF4 /* ResultsViewController.swift in Sources */,
 				00E6C1AC26305CCB0052A00E /* CalculatorViewController.swift in Sources */,
 				0096B0F5264BDAE5004F3AF4 /* CoreModel.xcdatamodeld in Sources */,
 				0096B0FC264BDAE5004F3AF4 /* WeatherData.swift in Sources */,
+				0056AAA0264C1B4300529A9B /* CoinData.swift in Sources */,
 				0096B02626441257004F3AF4 /* CustomTableViewCell.swift in Sources */,
 				0096B0FB264BDAE5004F3AF4 /* WeatherViewController.swift in Sources */,
 				00AA2891263066B90007613D /* StoryBrain.swift in Sources */,
@@ -669,14 +723,6 @@
 				0096B0EA264BDAE5004F3AF4 /* Base */,
 			);
 			name = Clima.storyboard;
-			sourceTree = "<group>";
-		};
-		0096B118264BDBEB004F3AF4 /* ByteCoin.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0096B119264BDBEB004F3AF4 /* Base */,
-			);
-			name = ByteCoin.storyboard;
 			sourceTree = "<group>";
 		};
 		00E6C01C263044610052A00E /* Main.storyboard */ = {
