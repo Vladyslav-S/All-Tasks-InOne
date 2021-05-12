@@ -8,6 +8,7 @@
 import UIKit
 class CustomTableViewCell: UITableViewCell {
     
+    // TODO outlets must be private
     @IBOutlet weak var imageOfLesson: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
