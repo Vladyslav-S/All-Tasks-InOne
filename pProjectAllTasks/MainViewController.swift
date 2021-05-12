@@ -33,10 +33,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var data12 = TipsyCalculatorViewController()
     var data13 = WeatherViewController()
     var data14 = ByteCoinViewController()
-    //var data15 =
+    var data15 = WelcomeViewController()
     
     func getCells() -> [LessonModel] {
-        return [data2.richModel, data3.poorModel, data4.diceModel, data5.magicBallModel, data6.calculatorModel, data7.xylophoneModel,     data8.eggTimerModel, data9.quizzlerModel, data10.destinyModel, data11.bmiCalculatorModel, data12.tipsyModel, data13.weatherModel, data14.byteCoinModel]
+        return [data2.richModel, data3.poorModel, data4.diceModel, data5.magicBallModel, data6.calculatorModel, data7.xylophoneModel,     data8.eggTimerModel, data9.quizzlerModel, data10.destinyModel, data11.bmiCalculatorModel, data12.tipsyModel, data13.weatherModel, data14.byteCoinModel, data15.chatModel]
     }
 //    let allCellData = getCells()
     

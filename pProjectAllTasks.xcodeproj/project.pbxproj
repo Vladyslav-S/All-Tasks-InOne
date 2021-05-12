@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,13 @@
 		0056AAA0264C1B4300529A9B /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056AA99264C1B4300529A9B /* CoinData.swift */; };
 		0056AAA1264C1B4300529A9B /* ByteCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056AA9B264C1B4300529A9B /* ByteCoinViewController.swift */; };
 		0056AAAB264C28AE00529A9B /* ByteCoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0056AAAA264C28AE00529A9B /* ByteCoin.storyboard */; };
+		0056AAD5264C2FB600529A9B /* FlashChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0056AAC7264C2FB500529A9B /* FlashChat.storyboard */; };
+		0056AAD9264C2FB600529A9B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056AACF264C2FB600529A9B /* ChatViewController.swift */; };
+		0056AADA264C2FB600529A9B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056AAD0264C2FB600529A9B /* WelcomeViewController.swift */; };
+		0056AADB264C2FB600529A9B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056AAD1264C2FB600529A9B /* LoginViewController.swift */; };
+		0056AADC264C2FB600529A9B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056AAD2264C2FB600529A9B /* RegisterViewController.swift */; };
+		0056AB02264C367D00529A9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056AB01264C367D00529A9B /* Constants.swift */; };
+		0056AB4F264C43AC00529A9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0056AB4E264C43AC00529A9B /* GoogleService-Info.plist */; };
 		0096B02626441257004F3AF4 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B02526441257004F3AF4 /* CustomTableViewCell.swift */; };
 		0096B03A26498242004F3AF4 /* LessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B03926498242004F3AF4 /* LessonModel.swift */; };
 		0096B0AA264BD966004F3AF4 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B09C264BD965004F3AF4 /* CalculatorBrain.swift */; };
@@ -63,6 +70,7 @@
 		00E6C21126305F940052A00E /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C20626305F940052A00E /* QuizBrain.swift */; };
 		00E6C21226305F940052A00E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C20726305F940052A00E /* Question.swift */; };
 		00E6C21326305F940052A00E /* Quizzler.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00E6C20926305F940052A00E /* Quizzler.storyboard */; };
+		37962116EC862D7ADE82C547 /* Pods_pProjectAllTasks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E82644B7AA2EA2426D9CB2B /* Pods_pProjectAllTasks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +79,13 @@
 		0056AA99264C1B4300529A9B /* CoinData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 		0056AA9B264C1B4300529A9B /* ByteCoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ByteCoinViewController.swift; sourceTree = "<group>"; };
 		0056AAAA264C28AE00529A9B /* ByteCoin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ByteCoin.storyboard; path = ../ByteCoin.storyboard; sourceTree = "<group>"; };
+		0056AAC8264C2FB500529A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FlashChat.storyboard; sourceTree = "<group>"; };
+		0056AACF264C2FB600529A9B /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		0056AAD0264C2FB600529A9B /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		0056AAD1264C2FB600529A9B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0056AAD2264C2FB600529A9B /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0056AB01264C367D00529A9B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0056AB4E264C43AC00529A9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0096B02526441257004F3AF4 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		0096B03926498242004F3AF4 /* LessonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonModel.swift; sourceTree = "<group>"; };
 		0096B09C264BD965004F3AF4 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
@@ -125,6 +140,9 @@
 		00E6C20626305F940052A00E /* QuizBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 		00E6C20726305F940052A00E /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		00E6C20A26305F940052A00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Quizzler.storyboard; sourceTree = "<group>"; };
+		0E82644B7AA2EA2426D9CB2B /* Pods_pProjectAllTasks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pProjectAllTasks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		455A763C9310851CB1F4F9AD /* Pods-pProjectAllTasks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pProjectAllTasks.debug.xcconfig"; path = "Target Support Files/Pods-pProjectAllTasks/Pods-pProjectAllTasks.debug.xcconfig"; sourceTree = "<group>"; };
+		4F660EDBFEF6BD265A7DEFB5 /* Pods-pProjectAllTasks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pProjectAllTasks.release.xcconfig"; path = "Target Support Files/Pods-pProjectAllTasks/Pods-pProjectAllTasks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37962116EC862D7ADE82C547 /* Pods_pProjectAllTasks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +256,35 @@
 			);
 			name = View;
 			path = "../../../../14/ByteCoin-iOS13/ByteCoin/View";
+			sourceTree = "<group>";
+		};
+		0056AAC5264C2F9600529A9B /* Lesson-15 */ = {
+			isa = PBXGroup;
+			children = (
+				0056AACE264C2FB600529A9B /* Controllers */,
+				0056AAC6264C2FB500529A9B /* Views */,
+				0056AB01264C367D00529A9B /* Constants.swift */,
+			);
+			path = "Lesson-15";
+			sourceTree = "<group>";
+		};
+		0056AAC6264C2FB500529A9B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0056AAC7264C2FB500529A9B /* FlashChat.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0056AACE264C2FB600529A9B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0056AAD0264C2FB600529A9B /* WelcomeViewController.swift */,
+				0056AAD2264C2FB600529A9B /* RegisterViewController.swift */,
+				0056AAD1264C2FB600529A9B /* LoginViewController.swift */,
+				0056AACF264C2FB600529A9B /* ChatViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		0096B099264BD965004F3AF4 /* Lesson-11 */ = {
@@ -374,6 +422,8 @@
 			children = (
 				00E6C015263044610052A00E /* pProjectAllTasks */,
 				00E6C014263044610052A00E /* Products */,
+				8F794468BD8FE0E316B4EFB8 /* Pods */,
+				BFB7884360E2EB6A1AA9753F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -407,8 +457,10 @@
 				0096B0BA264BDA68004F3AF4 /* Lesson-12 */,
 				0096B0D5264BDAE5004F3AF4 /* Lesson-13 */,
 				0096B10E264BDBEB004F3AF4 /* Lesson-14 */,
-				00E6C024263044640052A00E /* Info.plist */,
+				0056AAC5264C2F9600529A9B /* Lesson-15 */,
 				00E6C01F263044640052A00E /* Assets.xcassets */,
+				0056AB4E264C43AC00529A9B /* GoogleService-Info.plist */,
+				00E6C024263044640052A00E /* Info.plist */,
 				00E6C021263044640052A00E /* LaunchScreen.storyboard */,
 			);
 			path = pProjectAllTasks;
@@ -572,6 +624,23 @@
 			path = "Lesson-10";
 			sourceTree = "<group>";
 		};
+		8F794468BD8FE0E316B4EFB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				455A763C9310851CB1F4F9AD /* Pods-pProjectAllTasks.debug.xcconfig */,
+				4F660EDBFEF6BD265A7DEFB5 /* Pods-pProjectAllTasks.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BFB7884360E2EB6A1AA9753F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E82644B7AA2EA2426D9CB2B /* Pods_pProjectAllTasks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -579,9 +648,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E6C027263044640052A00E /* Build configuration list for PBXNativeTarget "pProjectAllTasks" */;
 			buildPhases = (
+				4B6F8AEEBA23B771B4A69927 /* [CP] Check Pods Manifest.lock */,
 				00E6C00F263044610052A00E /* Sources */,
 				00E6C010263044610052A00E /* Frameworks */,
 				00E6C011263044610052A00E /* Resources */,
+				1ED70E2504EFB8377C9E48BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -630,6 +701,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E6C1AF26305CCB0052A00E /* Calculator.storyboard in Resources */,
+				0056AAD5264C2FB600529A9B /* FlashChat.storyboard in Resources */,
 				0096B0C8264BDA68004F3AF4 /* Tipsy.storyboard in Resources */,
 				00E6C023263044640052A00E /* LaunchScreen.storyboard in Resources */,
 				00E6C1D026305DA80052A00E /* F.wav in Resources */,
@@ -641,6 +713,7 @@
 				00E6C1D326305DA80052A00E /* D.wav in Resources */,
 				0096B0B0264BD966004F3AF4 /* BMI.storyboard in Resources */,
 				00E6C1D126305DA80052A00E /* G.wav in Resources */,
+				0056AB4F264C43AC00529A9B /* GoogleService-Info.plist in Resources */,
 				00E6C1F326305E700052A00E /* EggTimer.storyboard in Resources */,
 				00E6C1CE26305DA80052A00E /* C.wav in Resources */,
 				00E6C1CD26305DA80052A00E /* A.wav in Resources */,
@@ -658,6 +731,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1ED70E2504EFB8377C9E48BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pProjectAllTasks/Pods-pProjectAllTasks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pProjectAllTasks/Pods-pProjectAllTasks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pProjectAllTasks/Pods-pProjectAllTasks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B6F8AEEBA23B771B4A69927 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pProjectAllTasks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		00E6C00F263044610052A00E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -668,6 +783,7 @@
 				00E6C1C926305DA80052A00E /* XylophoneViewController.swift in Sources */,
 				00E6C086263054DE0052A00E /* PoorViewController.swift in Sources */,
 				00AA2892263066B90007613D /* Story.swift in Sources */,
+				0056AADA264C2FB600529A9B /* WelcomeViewController.swift in Sources */,
 				0096B0AA264BD966004F3AF4 /* CalculatorBrain.swift in Sources */,
 				0096B03A26498242004F3AF4 /* LessonModel.swift in Sources */,
 				00E6C056263047920052A00E /* RichViewController.swift in Sources */,
@@ -676,6 +792,7 @@
 				0096B0FD264BDAE5004F3AF4 /* WeatherModel.swift in Sources */,
 				0096B0CB264BDA68004F3AF4 /* TipsyCalculatorViewController.swift in Sources */,
 				00E6C21226305F940052A00E /* Question.swift in Sources */,
+				0056AAD9264C2FB600529A9B /* ChatViewController.swift in Sources */,
 				0096B0CA264BDA68004F3AF4 /* ResultViewController.swift in Sources */,
 				0056AAA1264C1B4300529A9B /* ByteCoinViewController.swift in Sources */,
 				0056AA9F264C1B4300529A9B /* CoinManager.swift in Sources */,
@@ -688,12 +805,15 @@
 				0096B0FB264BDAE5004F3AF4 /* WeatherViewController.swift in Sources */,
 				00AA2891263066B90007613D /* StoryBrain.swift in Sources */,
 				00E6C21026305F940052A00E /* QuizzlerViewController.swift in Sources */,
+				0056AADC264C2FB600529A9B /* RegisterViewController.swift in Sources */,
 				0096B0FE264BDAE5004F3AF4 /* WeatherManager.swift in Sources */,
+				0056AADB264C2FB600529A9B /* LoginViewController.swift in Sources */,
 				00E6C017263044610052A00E /* AppDelegate.swift in Sources */,
 				00E6C17C263059610052A00E /* DiceViewController.swift in Sources */,
 				00E6C019263044610052A00E /* SceneDelegate.swift in Sources */,
 				0096B0AF264BD966004F3AF4 /* BMICalculateViewController.swift in Sources */,
 				00E6C19626305A7A0052A00E /* MagicBallViewController.swift in Sources */,
+				0056AB02264C367D00529A9B /* Constants.swift in Sources */,
 				00E6C21126305F940052A00E /* QuizBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -701,6 +821,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0056AAC7264C2FB500529A9B /* FlashChat.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0056AAC8264C2FB500529A9B /* Base */,
+			);
+			name = FlashChat.storyboard;
+			sourceTree = "<group>";
+		};
 		0096B0A5264BD965004F3AF4 /* BMI.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -918,6 +1046,7 @@
 		};
 		00E6C028263044640052A00E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 455A763C9310851CB1F4F9AD /* Pods-pProjectAllTasks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -937,6 +1066,7 @@
 		};
 		00E6C029263044640052A00E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F660EDBFEF6BD265A7DEFB5 /* Pods-pProjectAllTasks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
