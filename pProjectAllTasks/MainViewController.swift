@@ -12,6 +12,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var tableView: UITableView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated) // Must do this in order to documentation
+        navigationController?.navigationBar.barTintColor = UIColor(named: "Default")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -11,9 +11,13 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    
     var chatModel = LessonModel(name: "Fiveteenth lesson", type: "Chat on firebase", imageData: #imageLiteral(resourceName: "appstore"), withIdentifire: "FlashChatVC", storyboardName: "FlashChat")
     
+    override func viewWillAppear(_ animated: Bool) {
+        //navigationController?.isNavigationBarHidden = true
+        super.viewWillAppear(animated) // Must do this in order to documentation
+        navigationController?.navigationBar.barTintColor = UIColor(named: "BrandBlue")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +31,7 @@ class WelcomeViewController: UIViewController {
                     timerIndex += 1
                 }
     }
+    
     
 
 }
