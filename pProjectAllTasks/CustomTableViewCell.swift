@@ -9,8 +9,18 @@ import UIKit
 class CustomTableViewCell: UITableViewCell {
     
     // TODO outlets must be private
-    @IBOutlet weak var imageOfLesson: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet private weak var imageOfLesson: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var typeLabel: UILabel!
+    
+    func setupCell(currentCell: LessonModel, cell: CustomTableViewCell) -> CustomTableViewCell {
+        
+        cell.accessoryType = .disclosureIndicator //strelochka v pravo ->
+        cell.imageOfLesson.image = currentCell.imageData
+        cell.nameLabel.text = currentCell.name
+        cell.typeLabel.text = currentCell.type
+        
+        return cell
+    }
     
 }

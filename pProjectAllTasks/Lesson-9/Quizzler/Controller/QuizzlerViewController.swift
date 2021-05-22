@@ -7,7 +7,11 @@
 
 import UIKit
 
-class QuizzlerViewController: UIViewController {
+class QuizzlerViewController: UIViewController, ControllerIdentifiable {
+    static var cellModel: LessonModel {
+        return LessonModel(name: "Nineth lesson", type: "Quizzler", imageData: #imageLiteral(resourceName: "DOGE"), withIdentifire: "QuizzlerVC", storyboardName: "Quizzler")
+    }
+    
 
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
@@ -16,9 +20,7 @@ class QuizzlerViewController: UIViewController {
     @IBOutlet weak var firstVariantButton: UIButton!
     @IBOutlet weak var secondVariantButton: UIButton!
     @IBOutlet weak var thirdVariantButton: UIButton!
-    
-    var quizzlerModel = LessonModel(name: "Nineth lesson", type: "Quizzler", imageData: #imageLiteral(resourceName: "DOGE"), withIdentifire: "QuizzlerVC", storyboardName: "Quizzler")
-    
+       
     var quizBrain = QuizBrain()
        
     override func viewDidLoad() {

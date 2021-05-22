@@ -10,33 +10,45 @@ import UIKit
 import Firebase
 
 class ChatViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var messageTextfield: UITextField!
+    
+    @IBOutlet private weak var tableView: UITableView! {
+        didSet {
+            
+        }
+    }
+    @IBOutlet weak var messageTextView: UITextView!
+    @IBOutlet weak var messageTextViewHeightConstraint: NSLayoutConstraint!
+    
+    //@IBOutlet private weak var messageTextfield: UITextField!
     
     let db = Firestore.firestore()
     
     var messages: [Message] = []
-
+    var messageCell = MessageCell()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.dataSource = self
-       
-
-//        title = K.appName
         navigationItem.hidesBackButton = true
         
+        messageTextView.layer.cornerRadius = messageTextView.frame.size.height / 5
+        messageCell.transform = CGAffineTransform(rotationAngle: (-.pi))
+        messageCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
+        messageTextView.delegate = self
+        messageTextView.isScrollEnabled = true
+        
+        //tableView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.size.width - 10)
+        tableView.transform = CGAffineTransform(rotationAngle: (-.pi))
+        tableView.transform = CGAffineTransform(scaleX: 1, y: -1)
+        tableView.dataSource = self
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
+        
         loadMassages()
-
+        
     }
     
     func loadMassages() {
-         
-        db.collection(K.FStore.collectionName)
-            .order(by: K.FStore.dateField)
-            .addSnapshotListener { (querySnapshot, error) in
+        
+        db.collection(K.FStore.collectionName).order(by: K.FStore.dateField).addSnapshotListener { (querySnapshot, error) in
             
             self.messages = []
             
@@ -51,24 +63,20 @@ class ChatViewController: UIViewController {
                             let newMessage = Message(sender: messageSender, body: messageBody)
                             self.messages.append(newMessage)
                             
-                            
-                            
-                            DispatchQueue.main.async {
-                                
-                                self.tableView.reloadData()
-                                let indexPath = IndexPath(row: self.messages.count -  1 , section: 0)
-                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
-                            }
                         }
+                    }
+                    DispatchQueue.main.async {
+                        self.messages = self.messages.reversed()
+                        self.tableView.reloadData()
                     }
                 }
             }
         }
-        
     }
+    
     @IBAction func sendPressed(_ sender: UIButton) {
         
-        if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email {
+        if let messageBody = messageTextView.text, messageBody.isEmpty == false, let messageSender = Auth.auth().currentUser?.email {
             db.collection(K.FStore.collectionName).addDocument(data: [K.FStore.senderField : messageSender,
                                                                       K.FStore.bodyField : messageBody,
                                                                       K.FStore.dateField : Date().timeIntervalSince1970])
@@ -78,64 +86,85 @@ class ChatViewController: UIViewController {
                 } else {
                     print("Succesfully saved data")
                     DispatchQueue.main.async {
-                        self.messageTextfield.text = ""
+                        
+                        self.messageTextView.text = ""
+                        self.messageTextViewHeightConstraint.constant = 30
+                        
                     }
                 }
             }
-            
         }
-
+        //textViewDidEndEditing(messageTextView)
     }
-
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
-
+        
         do {
             try Auth.auth().signOut()
-
-            navigationController?.popToRootViewController(animated: true)
-
+            pop(numberOfTimes: 2)  // dismiss vievController Number of times
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
     }
+    
+    private func resetTheMessageTextView() {
+        
+    }
 }
 
+//MARK:- TableView DataSource
 extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let message = messages[indexPath.row]
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
-        
-        cell.label.text = message.body
-        
-        
-        //mess from a current user
-        if message.sender == Auth.auth().currentUser?.email {
-            cell.leftImageView.isHidden = true
-            cell.rightImageView.isHidden = false
-            
-            cell.messageBuble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
-            cell.label.textColor = UIColor(named: K.BrandColors.purple)
-        }
-        // this is a message from another sender
-        else {
-            cell.leftImageView.isHidden = false
-            cell.rightImageView.isHidden = true
-            
-            cell.messageBuble.backgroundColor = UIColor(named: K.BrandColors.purple)
-            cell.label.textColor = UIColor(named: K.BrandColors.lightPurple)
-        }
-        
-        
-        
-        return cell
+        return cell.configureViewOfTheCell(message, cell)
     }
 }
+//MARK:- textView Delegate
+extension ChatViewController: UITextViewDelegate {
+    
+    func textViewDidChange(_ textView: UITextView) {
+        
+        let rows = (messageTextView.contentSize.height - messageTextView.textContainerInset.top - messageTextView.textContainerInset.bottom) / messageTextView.font!.lineHeight
+        if rows < 4 {
+            let fixedWidth = messageTextView.frame.size.width
+            let newSize = messageTextView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+            var newFrame = messageTextView.frame
+            newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
+            self.messageTextViewHeightConstraint.constant = newSize.height
+            
+        } else {
+            let isOversize = messageTextView.contentSize.height >= messageTextViewHeightConstraint.constant
+            messageTextViewHeightConstraint.isActive = isOversize
+            textView.isScrollEnabled = isOversize
+        }
+    }
+    
+    
+    
+    /*func textViewDidBeginEditing(_ textView: UITextView) {
+     if messageTextView.textColor == UIColor.lightGray {
+     messageTextView.text = nil
+     messageTextView.textColor = UIColor.black
+     }
+     }
+     func textViewDidEndEditing(_ textView: UITextView) {
+     
+     if messageTextView.text.isEmpty {
+     messageTextView.text = "Write a message..."
+     messageTextView.textColor = UIColor.lightGray
+     
+     }
+     }*/
+}
+
+// add regestration via google
+// list of users after reg + another table view with users
+// chat with chosen user + GlobalChat
+// change width (depends )
 
 

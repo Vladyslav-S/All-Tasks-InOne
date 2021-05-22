@@ -8,7 +8,12 @@
 
 import UIKit
 
-class TipsyCalculatorViewController: UIViewController {
+class TipsyCalculatorViewController: UIViewController, ControllerIdentifiable {
+    static var cellModel: LessonModel {
+        
+        return LessonModel(name: "Twelveth lesson", type: "Tips)))", imageData: #imageLiteral(resourceName: "diamond"), withIdentifire: "TipsyVC", storyboardName: "Tipsy")
+    }
+    
 
     @IBOutlet weak var billTextField: UITextField!
     @IBOutlet weak var zeroPtcButton: UIButton!
@@ -16,7 +21,6 @@ class TipsyCalculatorViewController: UIViewController {
     @IBOutlet weak var twentyPtcButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
     
-    var tipsyModel = LessonModel(name: "Twelveth lesson", type: "Tips)))", imageData: #imageLiteral(resourceName: "diamond"), withIdentifire: "TipsyVC", storyboardName: "Tipsy")
     
     var tip = 0.0
     var numberOfPeoplr = 2

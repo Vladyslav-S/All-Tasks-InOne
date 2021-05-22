@@ -10,16 +10,19 @@ import UIKit
 import CoreLocation
 import CoreData
 
-class WeatherViewController: UIViewController {
+class WeatherViewController: UIViewController, ControllerIdentifiable {
+    static var cellModel: LessonModel {
+        
+        return LessonModel(name: "Thirteenth lesson", type: "CliMa)))", imageData: #imageLiteral(resourceName: "DiceSix"), withIdentifire: "ClimaVC", storyboardName: "Clima")
+    }
+    
     
     
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
-    
-    var weatherModel = LessonModel(name: "Thirteenth lesson", type: "CliMa)))", imageData: #imageLiteral(resourceName: "DiceSix"), withIdentifire: "ClimaVC", storyboardName: "Clima")
-    
+       
     var people: [NSManagedObject] = []
     
     

@@ -8,13 +8,13 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+class CalculatorViewController: UIViewController, ControllerIdentifiable {    
+    static var cellModel: LessonModel {
+        
+        return LessonModel(name: "Sixth lesson", type: "CalkulatorAutoLauout", imageData: #imageLiteral(resourceName: "DiceeLogo"), withIdentifire: "CalculatorVC", storyboardName: "Calculator")
+    }
     
-    
-    
-    var calculatorModel = LessonModel(name: "Sixth lesson", type: "CalkulatorAutoLauout", imageData: #imageLiteral(resourceName: "DiceeLogo"), withIdentifire: "CalculatorVC", storyboardName: "Calculator")
-
-    override func viewDidLoad() {
+override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }

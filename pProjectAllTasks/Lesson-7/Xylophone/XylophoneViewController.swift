@@ -9,10 +9,12 @@
 import UIKit
 import AVFoundation
 
-class XylophoneViewController: UIViewController {
-    
-    var xylophoneModel = LessonModel(name: "Seventh lesson", type: "Music", imageData: #imageLiteral(resourceName: "ETH"), withIdentifire: "XylophoneVC", storyboardName: "Xylophone")
-    
+class XylophoneViewController: UIViewController, ControllerIdentifiable {
+    static var cellModel: LessonModel {
+        
+        return LessonModel(name: "Seventh lesson", type: "Music", imageData: #imageLiteral(resourceName: "ETH"), withIdentifire: "XylophoneVC", storyboardName: "Xylophone")
+    }
+     
     var player: AVAudioPlayer?
 
     override func viewDidLoad() {

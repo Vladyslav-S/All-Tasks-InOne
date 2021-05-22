@@ -7,13 +7,18 @@
 
 import UIKit
 
-class RichViewController: UIViewController {
-
-    
-    var richModel = LessonModel(name: "Second lesson", type: "Rich", imageData: #imageLiteral(resourceName: "DiceOne"), withIdentifire: "RichVC", storyboardName: "Rich")
-   
+class RichViewController: UIViewController, ControllerIdentifiable {
+    static var cellModel: LessonModel {
+        
+            return LessonModel(name: "Second lesson", type: "Rich", imageData: #imageLiteral(resourceName: "DiceOne"), withIdentifire: "RichVC", storyboardName: "Rich")
+        // only  get get { }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
+    
+    
 }
 

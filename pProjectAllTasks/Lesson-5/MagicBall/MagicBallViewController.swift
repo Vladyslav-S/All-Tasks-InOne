@@ -7,12 +7,14 @@
 
 import UIKit
 
-class MagicBallViewController: UIViewController {
-
+class MagicBallViewController: UIViewController, ControllerIdentifiable {
+    static var cellModel: LessonModel {
+        
+        return LessonModel(name: "Fifth lesson", type: "BarabanJakubovicha", imageData: #imageLiteral(resourceName: "BTC"), withIdentifire: "MagicBallVC", storyboardName: "MagicBall")
+    }
+    
     @IBOutlet weak var imageView: UIImageView!
-    
-    var magicBallModel = LessonModel(name: "Fifth lesson", type: "BarabanJakubovicha", imageData: #imageLiteral(resourceName: "BTC"), withIdentifire: "MagicBallVC", storyboardName: "MagicBall")
-    
+       
     override func viewDidLoad() {
         
         super.viewDidLoad()

@@ -7,10 +7,12 @@
 
 import UIKit
 
-class PoorViewController: UIViewController {
-
-    var poorModel = LessonModel(name: "Third lesson", type: "Picture)) ", imageData: #imageLiteral(resourceName: "DiceTwo"), withIdentifire: "PoorVC", storyboardName: "Poor")
-    
+class PoorViewController: UIViewController, ControllerIdentifiable {
+    static var cellModel: LessonModel {
+        
+        return LessonModel(name: "Third lesson", type: "Picture)) ", imageData: #imageLiteral(resourceName: "DiceTwo"), withIdentifire: "PoorVC", storyboardName: "Poor")
+    }
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

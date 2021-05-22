@@ -8,14 +8,16 @@
 
 import UIKit
 
-class ByteCoinViewController: UIViewController {
+class ByteCoinViewController: UIViewController, ControllerIdentifiable {
+    static var cellModel: LessonModel {
+        
+        return LessonModel(name: "Fourteenth lesson", type: "Byte Coin)))", imageData: #imageLiteral(resourceName: "DiceFour"), withIdentifire: "ByteCoinVC", storyboardName: "ByteCoin")
+    }
+    
     
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
-    
-    
-    var byteCoinModel = LessonModel(name: "Fourteenth lesson", type: "Byte Coin)))", imageData: #imageLiteral(resourceName: "DiceFour"), withIdentifire: "ByteCoinVC", storyboardName: "ByteCoin")
     
     var coinManager = CoinManager()
     

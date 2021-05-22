@@ -7,14 +7,15 @@
 
 import UIKit
 
-class DiceViewController: UIViewController {
-
+class DiceViewController: UIViewController, ControllerIdentifiable {
+    static var cellModel: LessonModel {
+        
+        return LessonModel(name: "Fourth lesson", type: "Ryletka", imageData: #imageLiteral(resourceName: "DiceThree"), withIdentifire: "DiceVC", storyboardName: "Dice")
+    }
+    
     @IBOutlet weak var firstDice: UIImageView!
     @IBOutlet weak var secondDice: UIImageView!
-    
-
-    var diceModel = LessonModel(name: "Fourth lesson", type: "Ryletka", imageData: #imageLiteral(resourceName: "DiceThree"), withIdentifire: "DiceVC", storyboardName: "Dice")
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         

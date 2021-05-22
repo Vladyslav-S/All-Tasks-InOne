@@ -8,7 +8,12 @@
 
 import UIKit
 
-class BMICalculateViewController: UIViewController {
+class BMICalculateViewController: UIViewController, ControllerIdentifiable {
+    static var cellModel: LessonModel {
+        
+        return LessonModel(name: "Eleventh lesson", type: "bmiCalculator", imageData: #imageLiteral(resourceName: "coal"), withIdentifire: "BMIVC", storyboardName: "BMI")
+    }
+    
 
     var calculatorBrain = CalculatorBrain()
     
@@ -16,9 +21,7 @@ class BMICalculateViewController: UIViewController {
     @IBOutlet weak var weightValueLabel: UILabel!
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var weightSlider: UISlider!
-    
-    var bmiCalculatorModel = LessonModel(name: "Eleventh lesson", type: "bmiCalculator", imageData: #imageLiteral(resourceName: "coal"), withIdentifire: "BMIVC", storyboardName: "BMI")
-    
+      
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
