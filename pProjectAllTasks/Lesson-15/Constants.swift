@@ -7,11 +7,15 @@
 
 import Foundation
 
-struct K {
+struct Constants {
     
     static let appName = "⚡️FlashChat"
+    static let personChatCellIdentifier = "PersonToChatCell"
+    static let personChatCellNibName = "PersonToChatCell"
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "MessageCell"
+    
+    static let chooseSegue = "ChooseToChat"
     static let registerSegue = "RegisterToChat"
     static let loginSegue = "LoginToChat"
     

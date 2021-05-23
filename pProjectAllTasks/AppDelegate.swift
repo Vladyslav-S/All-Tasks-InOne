@@ -8,19 +8,24 @@
 import UIKit
 import CoreData
 import Firebase
+//import GoogleSignIn
 import IQKeyboardManagerSwift
 
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate/*, GIDSignInDelegate*/ {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        
         FirebaseApp.configure()
-        let db = Firestore.firestore()
-        print (db)
+
+//        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+//        GIDSignIn.sharedInstance().delegate = self
+        
+//        let db = Firestore.firestore()
+//        print (db)
         
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
@@ -28,9 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-
+    
     // MARK: UISceneSession Lifecycle
-
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
@@ -85,7 +89,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
-
 }
+//MARK:- google auth
+
+//protocol GIDSignInDelegate {
+//
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+//      // ...
+//      if let error = error {
+//        // ...
+//        return
+//      }
+//
+//      guard let authentication = user.authentication else { return }
+//      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+//                                                        accessToken: authentication.accessToken)
+//      // ...
+//    }
+//
+//    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+//        // Perform any operations when the user disconnects from app here.
+//        // ...
+//    }
+//
+//}
+
 
 

@@ -8,21 +8,28 @@
 
 import UIKit
 import Firebase
+//import GoogleSignIn
 
 class ChatViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
-            
+            tableView.transform = CGAffineTransform(rotationAngle: (-.pi))
+            tableView.transform = CGAffineTransform(scaleX: 1, y: -1)
+            tableView.dataSource = self
+            tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         }
     }
-    @IBOutlet weak var messageTextView: UITextView!
-    @IBOutlet weak var messageTextViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var messageTextView: UITextView! {
+        didSet {
+            messageTextView.layer.cornerRadius = messageTextView.frame.size.height / 5
+            messageTextView.delegate = self
+            messageTextView.isScrollEnabled = true
+        }
+    }
+    @IBOutlet private var messageTextViewHeightConstraint: NSLayoutConstraint!
     
-    //@IBOutlet private weak var messageTextfield: UITextField!
-    
-    let db = Firestore.firestore()
-    
+    private let db = Firestore.firestore()
     var messages: [Message] = []
     var messageCell = MessageCell()
     
@@ -30,84 +37,78 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         
-        messageTextView.layer.cornerRadius = messageTextView.frame.size.height / 5
         messageCell.transform = CGAffineTransform(rotationAngle: (-.pi))
         messageCell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
-        messageTextView.delegate = self
-        messageTextView.isScrollEnabled = true
-        
-        //tableView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.size.width - 10)
-        tableView.transform = CGAffineTransform(rotationAngle: (-.pi))
-        tableView.transform = CGAffineTransform(scaleX: 1, y: -1)
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         
         loadMassages()
-        
     }
     
     func loadMassages() {
         
-        db.collection(K.FStore.collectionName).order(by: K.FStore.dateField).addSnapshotListener { (querySnapshot, error) in
+        db.collection(Constants.FStore.collectionName).order(by: Constants.FStore.dateField).addSnapshotListener { [weak self](querySnapshot, error) in
             
-            self.messages = []
+            guard let strongSelf = self else { return }
             
             if let e = error {
                 print("issue retrieving data from database: \(e)")
-            } else {
-                if let snapshotDocument = querySnapshot?.documents {
-                    for doc in snapshotDocument {
-                        let data = doc.data()
-                        if let messageSender = data[K.FStore.senderField] as? String,
-                           let messageBody = data[K.FStore.bodyField] as? String {
-                            let newMessage = Message(sender: messageSender, body: messageBody)
-                            self.messages.append(newMessage)
-                            
-                        }
-                    }
-                    DispatchQueue.main.async {
-                        self.messages = self.messages.reversed()
-                        self.tableView.reloadData()
-                    }
-                }
+                return
+            }
+            guard let snapshotDocument = querySnapshot?.documents else {
+                return
+            }
+            //            for doc in snapshotDocument {
+            //                let data = doc.data()
+            //                if let messageSender = data[Constants.FStore.senderField] as? String,
+            //                   let messageBody = data[Constants.FStore.bodyField] as? String {
+            //                    let newMessage = Message(sender: messageSender, body: messageBody)
+            //                    strongSelf.messages.append(newMessage)
+            //                }
+            //            }
+            strongSelf.messages = snapshotDocument.compactMap { Message(documentData: $0.data()) }.reversed()
+            DispatchQueue.main.async {
+                //strongSelf.messages = strongSelf.messages.reversed()
+                strongSelf.tableView.reloadData()
             }
         }
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
+        saveMessages()
+    }
+    func saveMessages() {
         
-        if let messageBody = messageTextView.text, messageBody.isEmpty == false, let messageSender = Auth.auth().currentUser?.email {
-            db.collection(K.FStore.collectionName).addDocument(data: [K.FStore.senderField : messageSender,
-                                                                      K.FStore.bodyField : messageBody,
-                                                                      K.FStore.dateField : Date().timeIntervalSince1970])
-            { (error) in
+        if let messageBody = messageTextView.text,
+           messageBody.isEmpty == false,
+           let messageSender = Auth.auth().currentUser?.email {
+            db.collection(Constants.FStore.collectionName).addDocument(data: [Constants.FStore.senderField : messageSender,
+                                                                              Constants.FStore.bodyField : messageBody,
+                                                                              Constants.FStore.dateField : Date().timeIntervalSince1970])
+            { [weak self](error) in // weak self
+                
+                guard let strongSelf = self else { return }
+                
                 if let e = error {
                     print("There was an issue saving data to firestore: \(e)")
-                } else {
-                    print("Succesfully saved data")
-                    DispatchQueue.main.async {
-                        
-                        self.messageTextView.text = ""
-                        self.messageTextViewHeightConstraint.constant = 30
-                        
-                    }
+                    return
+                }
+                print("Succesfully saved data")
+                DispatchQueue.main.async {
+                    //                    strongSelf.messageTextView.text = ""
+                    strongSelf.messageCell.emptyTextView(strongSelf.messageTextView)
+                    strongSelf.messageTextViewHeightConstraint.constant = 30
                 }
             }
         }
-        //textViewDidEndEditing(messageTextView)
+        
     }
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
         
         do {
             try Auth.auth().signOut()
-            pop(numberOfTimes: 2)  // dismiss vievController Number of times
+            pop(numberOfTimes: 3)  // dismiss vievController Number of times
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
-    }
-    
-    private func resetTheMessageTextView() {
-        
     }
 }
 
@@ -118,10 +119,9 @@ extension ChatViewController: UITableViewDataSource {
         return messages.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let message = messages[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
-        return cell.configureViewOfTheCell(message, cell)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
+        cell.configureView(messages[indexPath.row])
+        return cell
     }
 }
 //MARK:- textView Delegate

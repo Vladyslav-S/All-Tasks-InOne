@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+//import GoogleSignIn
 
 class RegisterViewController: UIViewController {
 
@@ -23,7 +24,7 @@ class RegisterViewController: UIViewController {
                         print(e.localizedDescription)
                     } else {
                         //navigate to the chatVC
-                        self.performSegue(withIdentifier: K.registerSegue, sender: self)
+                        self.performSegue(withIdentifier: Constants.registerSegue, sender: self)
                     }
                 }
             }

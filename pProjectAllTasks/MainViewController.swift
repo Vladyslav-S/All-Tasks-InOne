@@ -19,60 +19,54 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         tableView.dataSource = self
         tableView.delegate = self
         
         //add cell reg
     }
-    
-    func getCells() -> [LessonModel] { // change to comp prop/ var cells: [LessonModel] {}
-        
-        var cells: [LessonModel] {
-            
-        }
-//        var data2 = RichViewController()
-//        var data3 = PoorViewController()
-//        var data4 = DiceViewController()
-//        var data5 = MagicBallViewController()
-//        var data6 = CalculatorViewController()
-//        var data7 = XylophoneViewController()
-//        var data8 = EggTimerViewController()
-//        var data9 = QuizzlerViewController()
-//        var data10 = DestinyViewController()
-//        var data11 = BMICalculateViewController()
-//        var data12 = TipsyCalculatorViewController()
-//        var data13 = WeatherViewController()
-//        var data14 = ByteCoinViewController()
-//        var data15 = WelcomeViewController()
-        
-        return [RichViewController.cellModel, PoorViewController.cellModel,DiceViewController.cellModel, MagicBallViewController.cellModel, CalculatorViewController.cellModel, XylophoneViewController.cellModel, EggTimerViewController.cellModel, QuizzlerViewController.cellModel, DestinyViewController.cellModel, BMICalculateViewController.cellModel, TipsyCalculatorViewController.cellModel, WeatherViewController.cellModel,ByteCoinViewController.cellModel, WelcomeViewController.cellModel]
-        }
+    var cellModels: [LessonModel] { // change to computing property / var cells: [LessonModel] {}
+            return [RichViewController.cellModel,
+                    PoorViewController.cellModel,
+                    DiceViewController.cellModel,
+                    MagicBallViewController.cellModel,
+                    CalculatorViewController.cellModel,
+                    XylophoneViewController.cellModel,
+                    EggTimerViewController.cellModel,
+                    QuizzlerViewController.cellModel,
+                    DestinyViewController.cellModel,
+                    BMICalculateViewController.cellModel,
+                    TipsyCalculatorViewController.cellModel,
+                    WeatherViewController.cellModel,
+                    ByteCoinViewController.cellModel,
+                    WelcomeViewController.cellModel]
+    }
     
     //MARK:- Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        let data = getCells()
-        
-        return data.count
+        return cellModels.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = getCells()
-        
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! CustomTableViewCell
-        return cell.setupCell(currentCell: data[indexPath.row], cell: cell )
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! CustomTableViewCell // ref
+        cell.setup(with: cellModels[indexPath.row])
+        return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCellModel = cellModels[indexPath.row]
+                
+        presentViewController(with: selectedCellModel)
+    }
+
+    func presentViewController(with model: LessonModel) {
+        let storyBoard = UIStoryboard(name: model.storyboardName, bundle: nil)
+        let controller = storyBoard.instantiateViewController(withIdentifier: model.withIdentifire)
+        controller.modalPresentationStyle = .fullScreen
         
-        let data = getCells()
-        
-        let currentCell = data[indexPath.row]
-        let storyBoard/*: UIStoryboard*/ = UIStoryboard(name: currentCell.storyboardName, bundle: nil)
-        let newVC = storyBoard.instantiateViewController(withIdentifier: currentCell.withIdentifire)
-        newVC.modalPresentationStyle = .fullScreen
-        navigationController?.pushViewController(newVC, animated: true)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
-
 
 extension UIViewController {
     func pop(numberOfTimes: Int) {

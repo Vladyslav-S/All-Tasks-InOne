@@ -7,6 +7,8 @@ target 'pProjectAllTasks' do
   
   
   pod 'Firebase/Auth'
+
+  pod  'Firebase/Core'
   
   pod 'Firebase/Firestore'
 

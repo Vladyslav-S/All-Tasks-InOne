@@ -22,6 +22,9 @@
 		0056AB81264D6A4B00529A9B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056AB7F264D6A4B00529A9B /* MessageCell.swift */; };
 		0056AB82264D6A4B00529A9B /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0056AB80264D6A4B00529A9B /* MessageCell.xib */; };
 		0056AB86264E91B100529A9B /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0056AB85264E91B100529A9B /* IQKeyboardManagerSwift */; };
+		0056ABD22659A6D200529A9B /* PersonToChatWithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056ABD12659A6D100529A9B /* PersonToChatWithViewController.swift */; };
+		0056ABD72659ABA000529A9B /* PersonToChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0056ABD52659ABA000529A9B /* PersonToChatCell.swift */; };
+		0056ABD82659ABA000529A9B /* PersonToChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0056ABD62659ABA000529A9B /* PersonToChatCell.xib */; };
 		0096B02626441257004F3AF4 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B02526441257004F3AF4 /* CustomTableViewCell.swift */; };
 		0096B03A26498242004F3AF4 /* LessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B03926498242004F3AF4 /* LessonModel.swift */; };
 		0096B0AA264BD966004F3AF4 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0096B09C264BD965004F3AF4 /* CalculatorBrain.swift */; };
@@ -93,6 +96,9 @@
 		0056AB79264D647800529A9B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		0056AB7F264D6A4B00529A9B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		0056AB80264D6A4B00529A9B /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		0056ABD12659A6D100529A9B /* PersonToChatWithViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonToChatWithViewController.swift; sourceTree = "<group>"; };
+		0056ABD52659ABA000529A9B /* PersonToChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonToChatCell.swift; sourceTree = "<group>"; };
+		0056ABD62659ABA000529A9B /* PersonToChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonToChatCell.xib; sourceTree = "<group>"; };
 		0096B02526441257004F3AF4 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		0096B03926498242004F3AF4 /* LessonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonModel.swift; sourceTree = "<group>"; };
 		0096B09C264BD965004F3AF4 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
@@ -283,6 +289,8 @@
 				0056AAC7264C2FB500529A9B /* FlashChat.storyboard */,
 				0056AB7F264D6A4B00529A9B /* MessageCell.swift */,
 				0056AB80264D6A4B00529A9B /* MessageCell.xib */,
+				0056ABD52659ABA000529A9B /* PersonToChatCell.swift */,
+				0056ABD62659ABA000529A9B /* PersonToChatCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,6 +301,7 @@
 				0056AAD0264C2FB600529A9B /* WelcomeViewController.swift */,
 				0056AAD2264C2FB600529A9B /* RegisterViewController.swift */,
 				0056AAD1264C2FB600529A9B /* LoginViewController.swift */,
+				0056ABD12659A6D100529A9B /* PersonToChatWithViewController.swift */,
 				0056AACF264C2FB600529A9B /* ChatViewController.swift */,
 			);
 			path = Controllers;
@@ -728,6 +737,7 @@
 				00E6C1AF26305CCB0052A00E /* Calculator.storyboard in Resources */,
 				0056AAD5264C2FB600529A9B /* FlashChat.storyboard in Resources */,
 				0096B0C8264BDA68004F3AF4 /* Tipsy.storyboard in Resources */,
+				0056ABD82659ABA000529A9B /* PersonToChatCell.xib in Resources */,
 				00E6C023263044640052A00E /* LaunchScreen.storyboard in Resources */,
 				00E6C1D026305DA80052A00E /* F.wav in Resources */,
 				00E6C1D226305DA80052A00E /* E.wav in Resources */,
@@ -821,6 +831,7 @@
 				00E6C21226305F940052A00E /* Question.swift in Sources */,
 				0056AAD9264C2FB600529A9B /* ChatViewController.swift in Sources */,
 				0096B0CA264BDA68004F3AF4 /* ResultViewController.swift in Sources */,
+				0056ABD72659ABA000529A9B /* PersonToChatCell.swift in Sources */,
 				0056AB81264D6A4B00529A9B /* MessageCell.swift in Sources */,
 				0056AAA1264C1B4300529A9B /* ByteCoinViewController.swift in Sources */,
 				0056AA9F264C1B4300529A9B /* CoinManager.swift in Sources */,
@@ -840,6 +851,7 @@
 				00E6C17C263059610052A00E /* DiceViewController.swift in Sources */,
 				00E6C019263044610052A00E /* SceneDelegate.swift in Sources */,
 				0096B0AF264BD966004F3AF4 /* BMICalculateViewController.swift in Sources */,
+				0056ABD22659A6D200529A9B /* PersonToChatWithViewController.swift in Sources */,
 				00E6C19626305A7A0052A00E /* MagicBallViewController.swift in Sources */,
 				0056AB02264C367D00529A9B /* Constants.swift in Sources */,
 				00E6C21126305F940052A00E /* QuizBrain.swift in Sources */,

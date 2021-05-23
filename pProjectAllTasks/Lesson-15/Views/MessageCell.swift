@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+//import GoogleSignIn
 
 class MessageCell: UITableViewCell {
 
@@ -35,38 +36,33 @@ class MessageCell: UITableViewCell {
     }
     
     
-    func configureViewOfTheCell(_ message: Message, _ cell: MessageCell) -> MessageCell {
+    func configureView(_ message: Message) {
         
-        cell.label.text = message.body
+        label.text = message.body
         
         if message.sender == Auth.auth().currentUser?.email {
-            cell.leftImageView.alpha = 0
-            cell.rightImageView.alpha = 1
+        leftImageView.alpha = 0
+            rightImageView.alpha = 1
         
-            cell.messageBuble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
-            cell.label.textColor = UIColor(named: K.BrandColors.purple)
-            
+            messageBuble.backgroundColor = UIColor(named: Constants.BrandColors.lightPurple)
+            label.textColor = UIColor(named: Constants.BrandColors.purple)
         }
         // this is a message from another sender
         else {
-            cell.leftImageView.alpha = 1
-            cell.rightImageView.alpha = 0
+            leftImageView.alpha = 1
+            rightImageView.alpha = 0
             
-            cell.messageBuble.backgroundColor = UIColor(named: K.BrandColors.purple)
-            cell.label.textColor = UIColor(named: K.BrandColors.lightPurple)
+            messageBuble.backgroundColor = UIColor(named: Constants.BrandColors.purple)
+            label.textColor = UIColor(named: Constants.BrandColors.lightPurple)
         }
-        return cell
     }
-    func emptyTextField(_ textField: UITextField) {
-        textField.text = ""
+    func emptyTextView(_ textView: UITextView) {
+        textView.text = ""
     }
     
     private func removeAllConstraints() {
-        
         removeConstraints(leftImageView.constraints)
         removeConstraints(rightImageView.constraints)
         removeConstraints(messageBuble.constraints)
-
     }
-    
 }

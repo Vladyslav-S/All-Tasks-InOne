@@ -8,15 +8,21 @@
 
 import UIKit
 import Firebase
+//import GoogleSignIn
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+//        GIDSignIn.sharedInstance()?.presentingViewController = self
+//        GIDSignIn.sharedInstance().signIn()
+    }
     
     @IBAction func loginPressed(_ sender: UIButton) {
-        
         
         if let email = emailTextfield.text, let password = passwordTextfield.text {
             
@@ -24,11 +30,18 @@ class LoginViewController: UIViewController {
                 if let e = error {
                     print(e.localizedDescription)
                 } else {
-                    self.performSegue(withIdentifier: K.loginSegue, sender: self)
+                    self.performSegue(withIdentifier: Constants.loginSegue, sender: self)
                 }
             }
         }
-        
     }
+
+//    @available(iOS 9.0, *)
+//    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+//      -> Bool {
+//      return GIDSignIn.sharedInstance().handle(url)
+//    }
+    
+    
     
 }
