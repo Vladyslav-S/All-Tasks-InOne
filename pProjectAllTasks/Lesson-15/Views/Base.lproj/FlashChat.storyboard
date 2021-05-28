@@ -261,8 +261,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="8P3-8U-vFF"/>
                     <connections>
-                        <outlet property="emailTextfield" destination="F21-w0-z4z" id="YUG-Hl-Rxj"/>
-                        <outlet property="passwordTextfield" destination="abR-gz-opL" id="xCU-X2-hrx"/>
+                        <outlet property="emailTextField" destination="F21-w0-z4z" id="YUG-Hl-Rxj"/>
+                        <outlet property="passwordTextField" destination="abR-gz-opL" id="xCU-X2-hrx"/>
                         <segue destination="OqS-k0-t15" kind="show" identifier="LoginToChat" id="oOo-HB-3w9"/>
                     </connections>
                 </viewController>

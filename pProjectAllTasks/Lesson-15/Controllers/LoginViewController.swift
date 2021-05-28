@@ -12,36 +12,49 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var emailTextfield: UITextField!
-    @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        GIDSignIn.sharedInstance()?.presentingViewController = self
-//        GIDSignIn.sharedInstance().signIn()
     }
     
     @IBAction func loginPressed(_ sender: UIButton) {
         
-        if let email = emailTextfield.text, let password = passwordTextfield.text {
-            
-            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-                if let e = error {
-                    print(e.localizedDescription)
-                } else {
-                    self.performSegue(withIdentifier: Constants.loginSegue, sender: self)
-                }
+//        if let email = emailTextField.text, let password = passwordTextfield.text {
+//
+//            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+//                if let e = error {
+//                    print(e.localizedDescription)
+//                } else {
+//                    self.performSegue(withIdentifier: Constants.loginSegue, sender: self)
+//                }
+//            }
+//        }
+        
+        
+        handelLogin()
+        
+    }
+
+    
+    func handelLogin() {
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            print("Form is not valid")
+            return
+        }
+
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if error != nil {
+                print(error)
+                return
             }
+            //succsesfully logged in user
+            self.performSegue(withIdentifier: Constants.loginSegue, sender: self)
+            //self.messagesController?.fetchUserAndSetNavBarTitle()
+            //self.dismiss(animated: true, completion: nil )
         }
     }
 
-//    @available(iOS 9.0, *)
-//    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
-//      -> Bool {
-//      return GIDSignIn.sharedInstance().handle(url)
-//    }
-    
-    
-    
 }

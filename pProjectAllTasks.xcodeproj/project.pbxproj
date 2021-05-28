@@ -45,6 +45,7 @@
 		00AA2890263066B90007613D /* DestinyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA2884263066B90007613D /* DestinyViewController.swift */; };
 		00AA2891263066B90007613D /* StoryBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA2886263066B90007613D /* StoryBrain.swift */; };
 		00AA2892263066B90007613D /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AA2887263066B90007613D /* Story.swift */; };
+		00D940782660757E00757B77 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D940772660757E00757B77 /* User.swift */; };
 		00E6C017263044610052A00E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C016263044610052A00E /* AppDelegate.swift */; };
 		00E6C019263044610052A00E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C018263044610052A00E /* SceneDelegate.swift */; };
 		00E6C01B263044610052A00E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6C01A263044610052A00E /* MainViewController.swift */; };
@@ -119,6 +120,7 @@
 		00AA2884263066B90007613D /* DestinyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinyViewController.swift; sourceTree = "<group>"; };
 		00AA2886263066B90007613D /* StoryBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBrain.swift; sourceTree = "<group>"; };
 		00AA2887263066B90007613D /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		00D940772660757E00757B77 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		00E6C013263044610052A00E /* pProjectAllTasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pProjectAllTasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E6C016263044610052A00E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00E6C018263044610052A00E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				0056AB79264D647800529A9B /* Message.swift */,
+				00D940772660757E00757B77 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -834,6 +837,7 @@
 				0056ABD72659ABA000529A9B /* PersonToChatCell.swift in Sources */,
 				0056AB81264D6A4B00529A9B /* MessageCell.swift in Sources */,
 				0056AAA1264C1B4300529A9B /* ByteCoinViewController.swift in Sources */,
+				00D940782660757E00757B77 /* User.swift in Sources */,
 				0056AA9F264C1B4300529A9B /* CoinManager.swift in Sources */,
 				0096B0AE264BD966004F3AF4 /* ResultsViewController.swift in Sources */,
 				00E6C1AC26305CCB0052A00E /* CalculatorViewController.swift in Sources */,
